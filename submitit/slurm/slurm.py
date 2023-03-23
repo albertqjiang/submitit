@@ -496,7 +496,7 @@ def _make_sbatch_string(
     if srun_args is None:
         srun_args = []
 
-    srun_cmd = _shlex_join(["srun", "--unbuffered", "--output", stdout, *stderr_flags, *srun_args])
+    srun_cmd = _shlex_join(["srun", "--comment", "neox", "--unbuffered", "--output", stdout, *stderr_flags, *srun_args])
     lines += [
         "",
         "# command",
